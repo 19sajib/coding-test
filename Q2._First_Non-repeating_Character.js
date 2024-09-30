@@ -3,8 +3,8 @@ const repeat = (input) => {
     
     for(let i = 0; i < len; i++) {
         let res = true;
-        for (let j = i + 1; j < len; j++) {
-            if(input[i] === input[j]) {
+        for (let j = 0; j < len; j++) {
+            if(i !== j && input[i] === input[j]) {
                 res = false;
                 break
             }
@@ -13,4 +13,4 @@ const repeat = (input) => {
     }
     return -1
 }
-console.log(repeat("v2tech"))
+console.log(repeat("aabb"))
